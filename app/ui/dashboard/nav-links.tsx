@@ -29,13 +29,13 @@ export default function NavLinks() {
         <>
             {items.length 
                 ? items.map((item,index) => {
-                    return <Link className={clsx(
+                    return <Link key={index} className={clsx(
                                 "flex p-2 items-center h-full md:w-full flex-1 md:h-12 md:flex-none hover:bg-slate-950/5",
                                 {
                                     "hover:bg-sky-200": pathname === item.product_url
                                 }
                             )} href={item.product_url}>  
-                                <li key={index} className={clsx(
+                                <li className={clsx(
                                     "text-sm cursor-pointer",
                                     {
                                         "text-blue-900": pathname === item.product_url,
